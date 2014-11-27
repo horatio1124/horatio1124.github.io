@@ -5,6 +5,6 @@
 <body>
 
 <h1>Verifique su edad!</h1>>
-El doble de su edad es:<?php echo $_POST["age"];?>
+El doble de su edad es:<?php echo $_POST["age"]+$_POST["age"];?>
 </body>
 </html>
