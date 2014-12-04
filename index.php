@@ -71,7 +71,7 @@ page via file:// -->
 		<h2>Employees CRUD</h2>
 		</br>
 	
-		<form>
+		<form action="index.php">
 		
 			<div class="input-group">
 			
@@ -146,7 +146,26 @@ page via file:// -->
 		
 	<script>
 	
-	 document.getElementById("addButton").onclick=function(){
+	 document.getElementById("recoverButton").onclick=function(){
+		alert("recoverButton has been clicked");
+		
+		<?php>
+		
+		$query="SELECT	 * FROM employees WHERE first_name LIKE "%",&name,"%"";
+
+$result=mysqli_query($con,&query);
+
+echo "<table border=1">
+
+while($row=mysqli_fetch_array ($result)){
+	echo "<tr>";
+	echo "<td>".$row['first_name']."</td>";
+	echo "<td>",$row['last_name']."</td>";
+}
+
+echo"</table>"
+
+?>
 	 }
 	
 	$("#addButton").mouseenter(function(){
