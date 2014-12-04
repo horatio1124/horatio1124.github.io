@@ -21,27 +21,6 @@ page via file:// -->
 
 <script type="text/javascript" src="jquery.min.js"></script>
 
-<?php
-
-	$con=msqli_connect("localhost","hgaldamez","hgaldamez","employees");
-
-		if(mysqli_connect_error()){
-			die("Could not connect");
-		}
-		
-
-?>
-
-<?php
-		if(&_GET["submit"]){
-			if($_GET["firstName"]){
-				echo "Your name is ".$_GET['firstName'];
-				}else{
-				 echo "nada";
-				}
-				
-		}		
-?>
 
 <style>
 
@@ -71,7 +50,7 @@ page via file:// -->
 		<h2>Employees CRUD</h2>
 		</br>
 	
-		<form>
+		<form action="index.php">
 		
 			<div class="input-group">
 			
